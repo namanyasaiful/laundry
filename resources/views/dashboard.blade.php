@@ -68,6 +68,7 @@
                 </div>
             </div>
         </div>
+        @can('Admin')
         <h1>Menu</h1>
         <div class="section-content">
             <div class="card-body">
@@ -110,6 +111,7 @@
                     </div>
                 </div>
             </div>
+            @endcan
         </div> 
     </section>
 </div>

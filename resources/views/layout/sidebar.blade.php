@@ -22,6 +22,7 @@
             <a href="">WL</a>
         </div>
         <ul class="sidebar-menu">
+            @can('Admin')
             <a href="{{route('dashboard')}}" type="submit" class="btn btn-success btn-lg btn-block btn-icon-split" style="align-content: center; font-size: 16px;">
                 <i class="fas fa-home"></i>
                 Dashboard
@@ -72,8 +73,64 @@
                 </button>
                 </form>
             </li>
+            @endcan
+
+            @can('Kasir')
+            <ul class="sidebar-menu">
+                <a href="{{route('dashboard')}}" type="submit" class="btn btn-success btn-lg btn-block btn-icon-split" style="align-content: center; font-size: 16px;">
+                    <i class="fas fa-home"></i>
+                    Dashboard
+                </a>
+                <br>
+                <li class="dropdown">
+                    <a href="#" class="nav-link has-dropdown"><i class="fa fa-cart-plus" style="font-size: 18px"></i><span>Transaksi</span></a>
+                    <ul class="dropdown-menu">
+                        <li ><a href="/transaksi/create">Transaksi</a></li>
+                        <li><a class="nav-link" href="/transaksi">Data Transaksi</a></li>
+                    </ul>
+                </li>
+                <br><br><br><br>
+                <li class="nav-item">
+                    <form action="{{ route('auth.logout') }}" method="POST">
+                    @csrf
+                    <button type="submit" class="btn btn-danger btn-lg btn-block btn-icon-split" style="align-content: center; font-size: 16px;">
+                        <i class="fas fa-rocket"></i>
+                        Logout
+                    </button>
+                    </form>
+                </li>
+                @endcan
+            </ul>
+
+            @can('Owner')
+            <ul class="sidebar-menu">
+                <a href="{{route('dashboard')}}" type="submit" class="btn btn-success btn-lg btn-block btn-icon-split" style="align-content: center; font-size: 16px;">
+                    <i class="fas fa-home"></i>
+                    Dashboard
+                </a>
+                <li class="dropdown">
+                    <a href="#" class="nav-link has-dropdown"><i class="fa fa-cart-plus" style="font-size: 18px"></i><span>Transaksi</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="nav-link" href="/transaksi">Data Transaksi</a></li>
+                    </ul>
+                </li>
+                <br><br><br><br>
+                <li class="nav-item">
+                    <form action="{{ route('auth.logout') }}" method="POST">
+                    @csrf
+                    <button type="submit" class="btn btn-danger btn-lg btn-block btn-icon-split" style="align-content: center; font-size: 16px;">
+                        <i class="fas fa-rocket"></i>
+                        Logout
+                    </button>
+                    </form>
+                </li>
+            </ul>
+            @endcan
+        </ul>
         </aside>
 </div>
+
+
 
 <script src="{{ asset('template/assets/bundles/lib.vendor.bundle.js') }}"></script>
 <script src="{{ asset('template/js/CodiePie.js') }}"></script>

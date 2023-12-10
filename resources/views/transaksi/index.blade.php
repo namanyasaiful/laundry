@@ -29,7 +29,6 @@
         <div class="card-header">
             <h4>Data Transaksi</h4>
             <div class="card-footer text-right">
-                <a class="btn btn-info " href="{{route('transaksi.create')}}">Create Transaksi</a>
                 <a class="btn btn-success" href="/pegawai/cetak_pdf">Import Transaksi</a>
             </div>
         </div>
@@ -82,6 +81,63 @@
         </section>
     </div>
 </div>
+
+@can('owner')
+<div class="main-content">
+    <section class="section">
+        <div class="card-header">
+            <h4>Data Transaksi</h4>
+            <div class="card-footer text-right">
+                <a class="btn btn-success" href="/pegawai/cetak_pdf">Import Transaksi</a>
+            </div>
+        </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-md v_center">
+                        <thead>
+                            <tr>
+                                <th>no</th>
+                                <th>Nama Outlet</th>
+                                <th>Nama Member</th>
+                                <th>Tanggal</th>
+                                <th>Status</th>
+                                <th>Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            @foreach ($transaksi as $key =>$transaksi)
+                            <td>{{$key + 1 }}</td>
+                            <td>{{ $transaksi->outlet->nama }}</td>
+                            <td>{{ $transaksi->member->nama }}</td>
+                            <td>{{ $transaksi->tgl }}</td>
+                            <td>{{ $transaksi->status }}</td>
+                            <td>{{ $transaksi->keterangan }}</td>
+                        </tr>
+                        </tbody>
+                        @endforeach
+                    </table>
+                </div>
+                <div class="card-footer text-left">
+                    <a class="btn btn-danger" href="{{route('dashboard')}}">kembali</a>
+                </div>
+            </div>
+            <div class="card-footer text-right">
+                <nav class="d-inline-block">
+                    <ul class="pagination mb-0">
+                        <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1"><i class="fas fa-chevron-left"></i></a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1 <span class="sr-only">(current)</span></a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </div>
+</div>
+@endcan
+
 @endsection
 <script src="{{ asset('template/assets/bundles/lib.vendor.bundle.js') }}"></script>
 <script src="{{ asset('template/js/CodiePie.js') }}"></script>
