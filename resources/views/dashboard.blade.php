@@ -80,7 +80,9 @@
                             <i class="fas fa-user"></i>
                         </div>
                         <div class="wizard-step-label">
-                            <a href="/user">User</a>
+                            <label for="user">User</label>
+                            <br>
+                            <a href="/user" class="btn btn-icon icon-left btn-info">Klik</a>
                         </div>
                         </div>
                         <div class="wizard-step wizard-step-danger">
@@ -88,7 +90,9 @@
                             <i class="fas fa-users"></i>
                         </div>
                         <div class="wizard-step-label">
-                            <a href="/member">Member</a>
+                            <label for="Member">Member</label>
+                            <br>
+                            <a href="/member" class="btn btn-icon icon-left btn-info">Klik</a>
                         </div>
                         </div>
                         <div class="wizard-step wizard-step-warning">
@@ -96,7 +100,9 @@
                             <i class="fas fa-city"></i>
                         </div>
                         <div class="wizard-step-label">
-                            <a href="/outlet">Outlet</a>
+                            <label for="outlet">Outlet</label>
+                            <br>
+                            <a href="/outlet" class="btn btn-icon icon-left btn-info">klik</a>
                         </div>
                         </div>
                         <div class="wizard-step wizard-step-success">
@@ -104,7 +110,8 @@
                             <i class="fas fa-cart-plus"></i>
                         </div>
                         <div class="wizard-step-label">
-                            <a href="/transaksi">Transaksi</a>
+                            <label for="transaksi">Transaksi</label>
+                            <a href="/transaksi" class="btn btn-icon icon-left btn-info">Klik</a>
                         </div>
                         </div>
                     </div>

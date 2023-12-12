@@ -40,7 +40,6 @@
                                 <th>No</th>
                                 <th>Nama</th>
                                 <th>Ussername</th>
-                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -49,15 +48,6 @@
                             <td>{{ $key + 1 }}</td>
                             <td>{{ $value->nama }}</td>
                             <td>{{ $value->ussername }}</td>
-                            <td>
-                                <a href="{{ route('user.show', $value->id) }}" title="View Student"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
-                                <a href="{{ route('user.edit', $value->id) }}" title="Edit Student"><button class="btn btn-secondary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
-                                <form action="{{ route('user.destroy' , $value->id) }}" method="POST"  accept-charset="UTF-8" style="display:inline">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-danger btn-sm" title="Delete Student"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
-                                </form>
-                            </td>
                         </tr>
                             @empty
                             <tr>

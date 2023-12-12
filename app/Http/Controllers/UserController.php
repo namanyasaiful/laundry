@@ -36,12 +36,14 @@ class UserController extends Controller
             'nama' => 'required',
             'ussername' => 'required',
             'password' => 'required',
+            'role_id' => 'required',
         ]);
 
         $user::create([
             'nama' => $request['nama'],
             'ussername' => $request['ussername'],
             'password' => $request['password'],
+            'role_id' => $request['role_id'],
         ]);
 
         return redirect()->route('user.index');

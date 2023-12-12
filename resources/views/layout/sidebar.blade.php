@@ -29,14 +29,13 @@
             </a>
             <li class="menu-header">User</li>
             <li class="has-dropdown dropdown">
-                <a class="has-dropdown"><i class="fa fa-user"></i><span>Menu User</span></a>
+                <a class="has-dropdown"><i class="fa fa-user"></i><span>User</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="/user/create">Create User</a></li>
                     <li><a class="nav-link" href="/user">Data User</a></li>
                 </ul>
             </li>
             <li class="has-dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fa fa-shipping-fast"></i><span>Menu Paket</span></a>
+                <a href="#" class="nav-link has-dropdown"><i class="fa fa-shipping-fast"></i><span>Paket</span></a>
                 <ul class="dropdown-menu">
                     <li ><a href="/paket/create">Create Paket</a></li>
                     <li><a href="/paket">Data Paket</a></li>
@@ -50,7 +49,7 @@
                 </ul>
             </li>
             <li class="dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fa fa-users" ></i><span>Menu Member</span></a>
+                <a href="#" class="nav-link has-dropdown"><i class="fa fa-users" ></i><span>Member</span></a>
                 <ul class="dropdown-menu">
                     <li ><a href="/member/create">Create Member</a></li>
                     <li><a href="/member">Data Member</a></li>
